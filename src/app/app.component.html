@@ -28,7 +28,9 @@
     <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+    <a class="py-2 d-none d-md-inline-block" href="#"
+      >Cart <span class="badge badge-light">4</span></a
+    >
   </div>
 </nav>
 
@@ -41,45 +43,16 @@
       And an even wittier subheading to boot. Jumpstart your marketing efforts
       with this example based on Apple's marketing pages.
     </p>
-    <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    <a
+      class="btn btn-outline-danger btn-lg"
+      (click)="subscribeToNotifications()"
+      >Subscribe</a
+    >
   </div>
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div
     class="product-device product-device-2 shadow-sm d-none d-md-block"
   ></div>
-
-  <div class="lessons-list-container v-h-center-block-parent">
-    <div class="buttons">
-      <button
-        class="btn btn-primary"
-        (click)="subscribeToNotifications()"
-        [disabled]="sub"
-      >
-        Subscribe
-      </button>
-
-      <button class="btn btn-danger" (click)="sendNewsletter()">
-        Send
-      </button>
-    </div>
-
-    <h2>All Lessons - V11</h2>
-
-    <table class="table lessons-list card card-strong">
-      <tbody>
-        <tr
-          *ngFor="let lesson of lessons$ | async"
-          [routerLink]="['/lessons', lesson.id]"
-        >
-          <td class="lesson-title">{{ lesson.description }}</td>
-          <td class="duration">
-            <i class="md-icon duration-icon">access_time</i>
-            <span>{{ lesson.duration }}</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </div>
 
 <!-- <router-outlet></router-outlet> -->

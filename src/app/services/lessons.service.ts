@@ -13,10 +13,10 @@ export class LessonsService {
   constructor(private http: HttpClient) {}
 
   loadAllLessons(): Observable<Lesson[]> {
-    return this.http.get<any>(environment.apiUrl + '/api/lessons').pipe(map((res) => res.lessons));
+    return this.http.get<any>('/api/lessons').pipe(map((res) => res.lessons));
   }
 
   findLessonById(id: number) {
-    return this.http.get<Lesson>(environment.apiUrl + '/api/lessons/' + id);
+    return this.http.get<Lesson>('/api/lessons/' + id);
   }
 }
