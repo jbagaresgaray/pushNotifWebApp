@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
     "@angular/service-worker": "~9.1.9",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.3.1",
     "device-uuid": "^1.0.4",
     "firebase": "^7.14.6",
     "ngx-bootstrap": "^5.6.1",
